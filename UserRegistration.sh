@@ -28,3 +28,13 @@ then
 else
    echo "Invalid E-mail";
 fi
+
+#mobile_number validation with predefined country code and 10 digits
+read -p "Enter mobile number: " num;
+pattern="[1-9+][ ][0-9]{10}$";
+if [[ $num =~ $pattern ]]
+then
+   echo "Valid Mobile Number";
+else
+   echo "Invalid Mobile Number";
+fi
