@@ -14,7 +14,7 @@ fi
 read -p "Enter Last Name: " lname;
 if [[ $lname =~ $pattern ]]
 then
-   echo "Valid Last Name";
+  	echo "Valid Last Name";
 else
    echo "Invalid Last Name";
 fi
@@ -37,4 +37,14 @@ then
    echo "Valid Mobile Number";
 else
    echo "Invalid Mobile Number";
+fi
+
+#password validation
+#rule1- min 8 characters
+read -p "Enter password: " pass;
+if [ ${#pass} -lt 8 ]
+then
+	echo "Password less than 8 characters";
+else
+	echo "Rule 1(min 8 char) passed";
 fi
