@@ -18,3 +18,13 @@ then
 else
    echo "Invalid Last Name";
 fi
+
+#email validation
+read -p "Enter E-mail: " email;
+pattern="^[a-zA-Z0-9]+([-+.]?)([a-zA-Z0-9]?)+@[a-zA-Z0-9]+.+[a-zA-Z]$"
+if [[ $email =~ $pattern ]]
+then
+   echo "Valid E-mail";
+else
+   echo "Invalid E-mail";
+fi
