@@ -47,4 +47,11 @@ then
 	echo "Password less than 8 characters";
 else
 	echo "Rule 1(min 8 char) passed";
+	pattern="[A-Z]{1,}.{7}";
+	if [[ $pass =~ $pattern ]]
+	then
+		echo "Rule 2 pass";
+	else
+		echo "Password Must contain an Upper Case Letter"
+	fi
 fi
